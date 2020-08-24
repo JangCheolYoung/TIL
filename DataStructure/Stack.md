@@ -1,7 +1,8 @@
 스택 Stack
 기본적인 자료구조로 마지막에 입력된 데이터가 첫번째로 출력됨.(후입선출)
 
-LIFO : Last In First Out 
+LIFO : Last In First Out
+
 FILO : First In Last Out
 
 LIFO라고 사용하는게 좀 더 직관성 있음.
