@@ -4,4 +4,4 @@
 ## 자료구조 (Data Structure)
 * 선형 구조 (Linear Structure)
   * [스택 (Stack)](https://github.com/JangCheolYoung/TIL/blob/master/DataStructure/Stack/Stack.md)
-  * 큐 (Queue)
+  * [큐 (Queue)](https://github.com/JangCheolYoung/TIL/blob/master/DataStructure/Queue/Queue.md)
