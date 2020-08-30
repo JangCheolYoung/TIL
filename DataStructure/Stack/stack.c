@@ -10,6 +10,7 @@ int main(){
     push(10);
     push(20);
     push(30);
+
     printf("%d\n", pop());
     printf("%d\n", pop());
     printf("%d\n", pop());
@@ -20,18 +21,18 @@ int main(){
 void push(int x){
     if(top >= 100){
         printf("overflow\n");
-        return 0;
+    }else{
+        stack[top] = x;
+        top++;
     }
-    stack[top] = x;
-    top++;
 }
 
 int pop(){
     if(top <= 0){
-        printf("underflow\n");
-        return 0;
+        printf("underflow");
+    }else{
+        int res = stack[top-1];
+        top--;
+        return res;
     }
-    int res = stack[top-1];
-    top--;
-    return res;
 }
