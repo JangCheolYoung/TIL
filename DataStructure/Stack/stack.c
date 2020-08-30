@@ -7,13 +7,9 @@ void push(int x);
 int pop();
 
 int main(){
-    push(1);
-    push(2);
-    push(3);
-    push(4);
-    push(5);
-    printf("%d\n", pop());
-    printf("%d\n", pop());
+    push(10);
+    push(20);
+    push(30);
     printf("%d\n", pop());
     printf("%d\n", pop());
     printf("%d\n", pop());
@@ -22,11 +18,19 @@ int main(){
 }
 
 void push(int x){
+    if(top >= 100){
+        printf("overflow\n");
+        return 0;
+    }
     stack[top] = x;
     top++;
 }
 
 int pop(){
+    if(top <= 0){
+        printf("underflow\n");
+        return 0;
+    }
     int res = stack[top-1];
     top--;
     return res;
