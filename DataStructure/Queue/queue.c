@@ -1,7 +1,8 @@
 #include<stdio.h>
 
+#define QUEUE_SIZE 100
 
-int queue[100];
+int queue[QUEUE_SIZE];
 int front = 0;
 int rear = 0;
 
@@ -12,6 +13,7 @@ int main(){
     put(10);
     put(20);
     put(30);
+    
     printf("%d\n", get());
     printf("%d\n", get());
     printf("%d\n", get());
@@ -20,12 +22,21 @@ int main(){
 }
 
 void put(int x){
-    queue[rear] = x;
-    rear++;
+    if(rear >= QUEUE_SIZE){
+        printf("overflow\n");
+    }else{
+        queue[rear] = x;
+        rear++;
+    }
 }
 
 int get(){
-    int res = queue[front];
-    front++;
-    return res;
+    if(front >= rear){
+        printf("underflow");
+        return -1;
+    }else{
+        int res = queue[front];
+        front++;
+        return res;
+    }
 }
