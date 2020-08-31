@@ -1,6 +1,7 @@
 #include<stdio.h>
 
-int stack[100];
+#define STACK_SIZE 100
+int stack[STACK_SIZE];
 int top = 0;
 
 void push(int x);
@@ -14,12 +15,11 @@ int main(){
     printf("%d\n", pop());
     printf("%d\n", pop());
     printf("%d\n", pop());
-
     return 0;
 }
 
 void push(int x){
-    if(top >= 100){
+    if(top >= STACK_SIZE){
         printf("overflow\n");
     }else{
         stack[top] = x;
@@ -30,6 +30,7 @@ void push(int x){
 int pop(){
     if(top <= 0){
         printf("underflow");
+        return -1;
     }else{
         int res = stack[top-1];
         top--;
