@@ -1,5 +1,6 @@
 # Today I Learned
-　　오늘　　나　　공부했다　　　　　　　　　　　　　　　　　　　　　　~~친구야~~
+하루하루 공부한 내용을 기록합니다.
+
 
 ## 자료구조 (Data Structure)
 
